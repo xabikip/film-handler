@@ -8,7 +8,8 @@
                  [duct/module.logging "0.4.0"]
                  [duct/module.sql "0.5.0"]
                  [duct/module.web "0.7.0"]
-                 [org.xerial/sqlite-jdbc "3.27.2"]]
+                 [org.xerial/sqlite-jdbc "3.27.2"]
+                 [hiccup "1.0.5"]]
   :plugins [[duct/lein-duct "0.12.1"]]
   :main ^:skip-aot film-ratings.main
   :resource-paths ["resources" "target/resources"]
