@@ -1,6 +1,17 @@
-# film-ratings
+# Film-ratings
 
-FIXME: description
+Simple Film ratings app to learn and practice Duct Clojure framework.
+
+## Resources
+
+[Original idea blog post](https://circleci.com/blog/build-a-clojure-web-app-using-duct/)
+
+[Duct](https://github.com/duct-framework/duct) Server-side application framework for Clojure 
+
+[Ataraxy](https://github.com/weavejester/ataraxy) Data-driven Ring routing and destructuring library 
+
+[Hiccup](http://weavejester.github.io/hiccup/) Fast library for rendering HTML in Clojure
+
 
 ## Developing
 
@@ -64,7 +75,3 @@ But you can also run tests through Leiningen.
 ```sh
 lein test
 ```
-
-## Legal
-
-Copyright © 2020 FIXME
