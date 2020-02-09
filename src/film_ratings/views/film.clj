@@ -61,9 +61,10 @@
   (page
    [:div.container.jumbotron.bg-light
     [:div.row [:h2 "Films"]]
-    (for [{:keys [name description rating]} (doall films)]
+    (for [{:keys [id name description rating]} (doall films)]
       [:div
        (film-attributes-view name description rating)
+       [:p [:a.btn.btn-primary {:href (str "/delete-films/" id) :title id} "Delete Film"]]
        [:hr]])
     (when messages
       (for [message (doall messages)]
