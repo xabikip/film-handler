@@ -1,6 +1,7 @@
 (ns film-ratings.main
   (:gen-class)
-  (:require [duct.core :as duct]))
+  (:require [clojure.java.io :as io]
+            [duct.core :as duct]))
 
 (duct/load-hierarchy)
 

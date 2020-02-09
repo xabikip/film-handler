@@ -6,12 +6,14 @@
             "/add-film"
             {:get [:film-ratings.handler.film/show-create]
              [:post {film-form :form-params}] [:film-ratings.handler.film/create film-form]}
-            [:get "/list-films"] [:film-ratings.handler.film/list]}}
+            [:get "/list-films"] [:film-ratings.handler.film/list]
+            ["/delete-films" id][:film-ratings.handler.film/delete id]}}
 
   :film-ratings.handler/index {}
   :film-ratings.handler.film/show-create {}
   :film-ratings.handler.film/create {:db #ig/ref :duct.database/sql}
   :film-ratings.handler.film/list {:db #ig/ref :duct.database/sql}
+  :film-ratings.handler.film/delete {:db #ig/ref :duct.database/sql}
 
   :duct.migrator/ragtime
   {:migrations [#ig/ref :film-ratings.migrations/create-film]}

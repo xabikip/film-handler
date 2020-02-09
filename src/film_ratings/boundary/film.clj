@@ -18,4 +18,12 @@
          {:id id}
          {:errors ["Failed to add film."]}))
      (catch SQLException ex
+       {:errors [(format "Film not added due to %s" (.getMessage ex))]})))
+  (delete-film [{db :spec} id]
+    (try
+     (let [result (jdbc/delete! db :id id)]
+       (if-let [id (val (ffirst result))]
+         {:id id}
+         {:errors ["Failed to add film."]}))
+     (catch SQLException ex
        {:errors [(format "Film not added due to %s" (.getMessage ex))]}))))
